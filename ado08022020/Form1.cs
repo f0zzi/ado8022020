@@ -13,10 +13,11 @@ namespace ado08022020
     public partial class Form1 : Form
     {
         public List<Employee> Employees { get; set; } = new List<Employee>();
+        public bool showAdmin = true;
         public Form1()
         {
             InitializeComponent();
-            listBox1.DataSource = ;
+            listBox1.DataSource = Array.FindAll<Employee>(Employees.ToArray(), x =>x.IsAdmin == showAdmin);
         }
         private void BtAdd_Click(object sender, EventArgs e)
         {
