@@ -46,16 +46,20 @@
             // cbShowAdmin
             // 
             this.cbShowAdmin.AutoSize = true;
+            this.cbShowAdmin.Checked = true;
+            this.cbShowAdmin.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbShowAdmin.Location = new System.Drawing.Point(13, 7);
             this.cbShowAdmin.Name = "cbShowAdmin";
             this.cbShowAdmin.Size = new System.Drawing.Size(113, 21);
             this.cbShowAdmin.TabIndex = 1;
             this.cbShowAdmin.Text = "Show admins";
             this.cbShowAdmin.UseVisualStyleBackColor = true;
+            this.cbShowAdmin.CheckedChanged += new System.EventHandler(this.CbShowAdmin_CheckedChanged);
             // 
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.Color.PaleGreen;
+            this.btAdd.FlatAppearance.BorderSize = 0;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAdd.Location = new System.Drawing.Point(13, 370);
             this.btAdd.Name = "btAdd";
@@ -68,6 +72,7 @@
             // btDelete
             // 
             this.btDelete.BackColor = System.Drawing.Color.Tomato;
+            this.btDelete.FlatAppearance.BorderSize = 0;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Location = new System.Drawing.Point(177, 370);
             this.btDelete.Name = "btDelete";
@@ -75,6 +80,7 @@
             this.btDelete.TabIndex = 4;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.BtDelete_Click);
             // 
             // Form1
             // 

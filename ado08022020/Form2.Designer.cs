@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbPassConf = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.cbIsAdmin = new System.Windows.Forms.CheckBox();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.lbError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,13 +54,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // textBox1
+            // tbLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 37);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbLogin.Location = new System.Drawing.Point(17, 37);
+            this.tbLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(235, 22);
+            this.tbLogin.TabIndex = 1;
             // 
             // label2
             // 
@@ -69,15 +72,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
-            // textBox2
+            // tbPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 91);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(235, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.tbPass.Location = new System.Drawing.Point(17, 91);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '*';
+            this.tbPass.Size = new System.Drawing.Size(235, 22);
+            this.tbPass.TabIndex = 3;
+            this.tbPass.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -89,15 +92,15 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Confirm Password";
             // 
-            // textBox3
+            // tbPassConf
             // 
-            this.textBox3.Location = new System.Drawing.Point(17, 145);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(235, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.tbPassConf.Location = new System.Drawing.Point(17, 145);
+            this.tbPassConf.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPassConf.Name = "tbPassConf";
+            this.tbPassConf.PasswordChar = '*';
+            this.tbPassConf.Size = new System.Drawing.Size(235, 22);
+            this.tbPassConf.TabIndex = 5;
+            this.tbPassConf.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -108,12 +111,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Adress";
             // 
-            // textBox4
+            // tbAddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(17, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(235, 22);
-            this.textBox4.TabIndex = 7;
+            this.tbAddress.Location = new System.Drawing.Point(17, 196);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(235, 22);
+            this.tbAddress.TabIndex = 7;
             // 
             // label5
             // 
@@ -124,40 +127,72 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Phone";
             // 
-            // textBox5
+            // tbPhone
             // 
-            this.textBox5.Location = new System.Drawing.Point(17, 251);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(235, 22);
-            this.textBox5.TabIndex = 9;
+            this.tbPhone.Location = new System.Drawing.Point(17, 251);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(235, 22);
+            this.tbPhone.TabIndex = 9;
             // 
-            // checkBox1
+            // cbIsAdmin
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 287);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(69, 21);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Admin";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbIsAdmin.AutoSize = true;
+            this.cbIsAdmin.Location = new System.Drawing.Point(17, 287);
+            this.cbIsAdmin.Name = "cbIsAdmin";
+            this.cbIsAdmin.Size = new System.Drawing.Size(69, 21);
+            this.cbIsAdmin.TabIndex = 10;
+            this.cbIsAdmin.Text = "Admin";
+            this.cbIsAdmin.UseVisualStyleBackColor = true;
+            // 
+            // btAdd
+            // 
+            this.btAdd.Location = new System.Drawing.Point(17, 315);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(75, 23);
+            this.btAdd.TabIndex = 11;
+            this.btAdd.Text = "Add";
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.BtAdd_Click);
+            // 
+            // btCancel
+            // 
+            this.btCancel.Location = new System.Drawing.Point(177, 315);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 23);
+            this.btCancel.TabIndex = 12;
+            this.btCancel.Text = "Cancel";
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.BtCancel_Click);
+            // 
+            // lbError
+            // 
+            this.lbError.AutoSize = true;
+            this.lbError.ForeColor = System.Drawing.Color.Red;
+            this.lbError.Location = new System.Drawing.Point(99, 288);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(0, 17);
+            this.lbError.TabIndex = 13;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 324);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(265, 356);
+            this.Controls.Add(this.lbError);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.btAdd);
+            this.Controls.Add(this.cbIsAdmin);
+            this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbPassConf);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -168,15 +203,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbPassConf;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.CheckBox cbIsAdmin;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.Label lbError;
     }
 }
