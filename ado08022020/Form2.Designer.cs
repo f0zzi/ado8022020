@@ -107,9 +107,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Adress";
+            this.label4.Text = "Address";
             // 
             // tbAddress
             // 
